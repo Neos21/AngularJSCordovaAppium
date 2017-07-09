@@ -1,3 +1,42 @@
+# AngularJS Cordova Appium
+
+AngularJS + Cordova なアプリに Appium を使って E2E テストを行うサンプルです。
+
+# How To Use?
+
+```sh
+# Install npm Packages
+$ npm install
+# Post Install : cordova prepare
+
+# Task Info
+$ npm run info
+
+# Live-Reload Develop
+$ npm run dev
+
+# Build To ./www/
+$ npm run build
+# And Cordova Build ...
+$ npm run cordova build ios
+
+# Build And Launch iPhone7 Simulator
+$ npm run emu
+# Also
+$ npm start
+
+# E2E Test
+# Launch Appium Server
+$ npm run appium
+# Run Protractor
+$ npm run e2e
+```
+
+# How I Made It
+
+このように作りました。コマンドのみ列挙。
+
+```sh
 # Start Project
 $ npm init
 $ git init
@@ -8,12 +47,16 @@ $ bower init
 
 # Install AngularJS
 $ bower i angular#1.6.5 --save
+$ bower i angular-route --save
 $ bower i angular-bootstrap --save
 
 # Install Cordova
 $ npm i -D cordova
 $ cordova create AngularJSCordovaAppium com.example.angularjs.cordova.appium AngularJSCordovaAppium
-# Merge Cordova Project Files
+
+# Merge Cordova Project Files ...
+
+# Add Platforms And Plugins
 $ cordova platform add ios
 $ cordova platform add browser
 $ cordova plugin add cordova-plugin-console
@@ -29,14 +72,10 @@ $ npm i -D browserify vinyl-source-stream babelify babel-preset-2015
 # HTML
 $ npm i -D gulp-inject wiredep gulp-useref
 
-# And Make gulpfile.js ....
-
-
+# And Make gulpfile.js ...
 
 # Agree XCode License
 $ sudo xcodebuild -license
-
-
 
 # Homebrew : Before
 $ brew list
@@ -87,7 +126,7 @@ bash-completion
 carthage                # Cathage : appium-xcuitest-driver Requires
 git
 ios-webkit-debug-proxy  # iOS WebKit Debug Proxy : Proxy Safari DevTools
-libimobiledevice        # Lib iMobile Device : 
+libimobiledevice        # Lib iMobile Device : Get iOS Device Info
 libplist
 libtasn1
 libtool
@@ -119,9 +158,9 @@ power_assert (0.2.2)
 psych (2.0.8)
 rake (10.4.2)
 rdoc (4.2.0)
-rouge (2.0.7)     # XCPretty Dependencies Syntax Highlighter
+rouge (2.0.7)     # Rouge : XCPretty Dependencies Syntax Highlighter
 test-unit (3.0.8)
-xcpretty (0.2.8)  # XCPretty
+xcpretty (0.2.8)  # XCPretty : Pretty XCode Log
 
 # Install Tools by npm
 $ npm install -g appium-doctor authorize-ios deviceconsole ios-deploy ios-sim
@@ -142,9 +181,7 @@ $ npm list -g --depth=0
 ├── ios-sim@6.0.0        # iOS Sim : Launch iOS Sim Without XCode
 └── npm@3.10.10
 
-# Install Protractor + Appium
-$ npm i -D gulp-protractor wd wd-bridge appium
+# Install Protractor And Appium
+$ npm i -D protractor gulp-protractor wd wd-bridge appium
 $ npm i -D gulp-shell jasmine-spec-reporter
-
-# Modify AngularJS App
-$ bower i angular-route --save
+```

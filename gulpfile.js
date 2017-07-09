@@ -16,11 +16,13 @@ const cordova = require('cordova-lib').cordova;
  */
 gulp.task('default', () => {
   $.description.help({
-    main: ['build', 'emu', 'dev'],
+    main: ['appium', 'build', 'dev', 'e2e', 'emu'],
     description: {
-      'build': 'src ディレクトリのファイルをビルドし www ディレクトリに出力する',
-      'dev'  : '開発用ライブリロードを開始する',
-      'emu'  : 'ビルド後 iPhone7 シミュレータを起動する'
+      appium: 'Appium サーバを起動する (e2e タスクの前に実行しておくこと)',
+      build : 'src ディレクトリのファイルをビルドし www ディレクトリに出力する',
+      dev   : '開発用ライブリロードを開始する',
+      e2e   : 'Protractor による E2E テストを実行する (事前に appium タスクを実行しておくこと)',
+      emu   : 'ビルド後 iPhone7 シミュレータを起動する'
     }
   });
 });

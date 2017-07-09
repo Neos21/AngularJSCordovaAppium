@@ -7,7 +7,14 @@
     "postinstall": "cordova prepare",
     "bower": "bower",
     "cordova": "cordova",
-    "gulp": "gulp"
+    "gulp": "gulp",
+    "start": "gulp emu",
+    "info": "gulp default",
+    "build": "gulp build",
+    "dev": "gulp dev",
+    "emu": "gulp emu",
+    "appium": "gulp appium",
+    "e2e": "gulp e2e"
   },
   "author": "Neos21 <neos21@gmail.com> (http://neo.s21.xrea.com/)",
   "license": "MIT",
