@@ -1,2 +1,2 @@
-const sampleConst = '#f0f0f0';
+const sampleConst = 'Sample';
 export default sampleConst;

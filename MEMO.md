@@ -13,6 +13,7 @@ $ bower i angular-bootstrap --save
 # Install Cordova
 $ npm i -D cordova
 $ cordova create AngularJSCordovaAppium com.example.angularjs.cordova.appium AngularJSCordovaAppium
+# Merge Cordova Project Files
 $ cordova platform add ios
 $ cordova platform add browser
 $ cordova plugin add cordova-plugin-console
@@ -20,10 +21,130 @@ $ cordova plugin add cordova-plugin-statusbar
 $ cordova plugin add cordova-plugin-browsersync
 
 # Setup Gulp Scripts
-$ npm i -D gulp gulp-load-plugins del run-sequence gulp-watch
+$ npm i -D gulp gulp-load-plugins del run-sequence gulp-watch gulp-description
 # CSS
 $ npm i -D gulp-sass gulp-sourcemaps
 # JS
 $ npm i -D browserify vinyl-source-stream babelify babel-preset-2015
 # HTML
-$ npm i -D gulp-inject wiredep
+$ npm i -D gulp-inject wiredep gulp-useref
+
+# And Make gulpfile.js ....
+
+
+
+# Agree XCode License
+$ sudo xcodebuild -license
+
+
+
+# Homebrew : Before
+$ brew list
+autoconf
+bash-completion
+git
+makedepend
+openssl
+pkg-config
+rbenv
+readline
+ruby-build
+tig
+xz
+
+# RubyGems : Before
+$ gem list
+
+*** LOCAL GEMS ***
+
+bigdecimal (1.2.6)
+io-console (0.4.3)
+json (1.8.1)
+minitest (5.4.3)
+power_assert (0.2.2)
+psych (2.0.8)
+rake (10.4.2)
+rdoc (4.2.0)
+test-unit (3.0.8)
+
+# npm : Before
+$ npm list -g --depth=0
+/Users/Neo/.nodebrew/node/v6.10.3/lib
+├── bower@1.8.0
+├── cordova@7.0.1
+├── eslint@4.2.0
+└── npm@3.10.10
+
+# Install Tools by Homebrew
+$ brew install carthage ios-webkit-debug-proxy
+$ brew upgrade libimobiledevice --HEAD
+
+# Homebrew : After
+$ brew list
+autoconf
+automake
+bash-completion
+carthage                # Cathage : appium-xcuitest-driver Requires
+git
+ios-webkit-debug-proxy  # iOS WebKit Debug Proxy : Proxy Safari DevTools
+libimobiledevice        # Lib iMobile Device : 
+libplist
+libtasn1
+libtool
+libusb
+libxml2
+makedepend
+openssl
+pkg-config
+rbenv
+readline
+ruby-build
+tig
+usbmuxd
+xz
+
+# Install Tools by RubyGems
+$ gem install xcpretty
+
+# RubyGems : After
+$ gem list
+
+*** LOCAL GEMS ***
+
+bigdecimal (1.2.6)
+io-console (0.4.3)
+json (1.8.1)
+minitest (5.4.3)
+power_assert (0.2.2)
+psych (2.0.8)
+rake (10.4.2)
+rdoc (4.2.0)
+rouge (2.0.7)     # XCPretty Dependencies Syntax Highlighter
+test-unit (3.0.8)
+xcpretty (0.2.8)  # XCPretty
+
+# Install Tools by npm
+$ npm install -g appium-doctor authorize-ios deviceconsole ios-deploy ios-sim
+$ sudo authorize-ios
+# Check Appium Doctor
+$ appium-doctor --ios
+
+# npm : After
+$ npm list -g --depth=0
+/Users/Neo/.nodebrew/node/v6.10.3/lib
+├── appium-doctor@1.4.2  # Appium Doctor : Can I Use Appium Checker
+├── authorize-ios@1.0.5  # Authorize iOS : Authorize iOS
+├── bower@1.8.0
+├── cordova@7.0.1
+├── deviceconsole@1.0.1  # Device Console : Pretty iOS Log
+├── eslint@4.2.0
+├── ios-deploy@1.9.1     # iOS Deploy : Install iOS App Without XCode
+├── ios-sim@6.0.0        # iOS Sim : Launch iOS Sim Without XCode
+└── npm@3.10.10
+
+# Install Protractor + Appium
+$ npm i -D gulp-protractor wd wd-bridge appium
+$ npm i -D gulp-shell jasmine-spec-reporter
+
+# Modify AngularJS App
+$ bower i angular-route --save

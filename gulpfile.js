@@ -257,3 +257,37 @@ gulp.task('cordova-emulate-iphone7', () => {
     'options': ['--target=iPhone-7']
   });
 });
+
+
+// E2E Test
+// --------------------------------------------------------------------------------
+
+/**
+ * Appium サーバを起動する
+ * 
+ * - e2e タスクを実行する前に別のターミナルで実行しておくこと
+ */
+gulp.task('appium', $.shell.task(
+  ['appium --nodeconfig ./nodeConfig.json --session-override'],
+  { quiet: false }
+));
+
+/**
+ * Protractor を使用した E2E テストを実行する
+ * 
+ * - 事前に emu タスクを実行しアプリのビルドを完了させておくこと
+ * - 事前に appium タスクを別のターミナルで実行しておくこと
+ */
+gulp.task('e2e', (done) => {
+  gulp
+    .src('./e2e/**/*.spec.js')
+    .pipe($.protractor.protractor({
+      configFile: 'protractor.conf.js'
+    }))
+    .on('error', (error) => {
+      throw error;
+    })
+    .on('end', () => {
+      done();
+    });
+});
