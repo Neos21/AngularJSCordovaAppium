@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app>
+  <head>
+    <meta charset="UTF-8">
+    <title>AngularJS Cordova Appium</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    
+    <!-- Gulp-Useref -->
+    <!-- build:css css/vendor.css -->
+      <!-- Wiredep -->
+      <!-- bower:css -->
+      <!-- endbower -->
+    <!-- endbuild -->
+    
+    <!-- Gulp-Useref -->
+    <!-- build:css css/index.css -->
+      <!-- Gulp-Inject -->
+      <!-- inject:css -->
+      <!-- endinject -->
+    <!-- endbuild -->
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="container">
+        <label>Name:</label>
+        <input type="text" id="your-name" ng-model="yourName" placeholder="Enter a name here">
+        <hr>
+        <h1>Hello {{yourName}}!</h1>
+      </div>
+    </div>
+    
+    <!-- Gulp-Useref -->
+    <!-- build:js js/vendor.js -->
+      <!-- Wiredep -->
+      <!-- bower:js -->
+      <!-- endbower -->
+    <!-- endbuild -->
+    
+    <!-- Cordova -->
+    <script src="cordova.js"></script>
+    
+    <!-- Gulp-Useref -->
+    <!-- build:js js/index.js -->
+      <!-- Gulp-Inject -->
+      <!-- inject:js -->
+      <!-- endinject -->
+    <!-- endbuild -->
+  </body>
+</html>

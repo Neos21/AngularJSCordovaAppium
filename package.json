@@ -1,0 +1,53 @@
+{
+  "name": "angularjs-cordova-appium",
+  "version": "1.0.0",
+  "description": "AngularJS Cordova Appium",
+  "main": "index.js",
+  "scripts": {
+    "bower": "bower",
+    "cordova": "cordova",
+    "gulp": "gulp"
+  },
+  "author": "Neos21 <neos21@gmail.com> (http://neo.s21.xrea.com/)",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^7.3.0",
+    "bower": "^1.8.0",
+    "browserify": "^14.4.0",
+    "cordova": "^7.0.1",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-description": "^0.1.2",
+    "gulp-inject": "^4.2.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-useref": "^3.1.2",
+    "gulp-watch": "^4.3.11",
+    "run-sequence": "^2.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "wiredep": "^4.0.0"
+  },
+  "dependencies": {
+    "cordova-browser": "^4.1.0",
+    "cordova-ios": "^4.4.0",
+    "cordova-plugin-browsersync": "^0.1.6",
+    "cordova-plugin-console": "^1.0.7",
+    "cordova-plugin-statusbar": "^2.2.3",
+    "cordova-plugin-whitelist": "^1.3.2"
+  },
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-browsersync": {},
+      "cordova-plugin-console": {},
+      "cordova-plugin-statusbar": {}
+    },
+    "platforms": [
+      "browser",
+      "ios"
+    ]
+  }
+}

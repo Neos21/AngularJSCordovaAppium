@@ -1,0 +1,9 @@
+bower_components
+node_modules
+
+platforms
+plugins
+!www/.gitkeep
+www
+
+.DS_Store
