@@ -4,7 +4,6 @@
   "description": "AngularJS Cordova Appium",
   "main": "index.js",
   "scripts": {
-    "postinstall": "cordova prepare",
     "bower": "bower",
     "cordova": "cordova",
     "gulp": "gulp",

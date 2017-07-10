@@ -5,9 +5,10 @@ AngularJS + Cordova なアプリに Appium を使って E2E テストを行う�
 # How To Use?
 
 ```sh
-# Install npm Packages
+# Install Packages
 $ npm install
-# Post Install : cordova prepare
+$ npm run bower install
+$ npm run cordova prepare
 
 # Task Info
 $ npm run info
