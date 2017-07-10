@@ -105,7 +105,7 @@ gulp.task('watch', () => {
   $.watch('./src/index.html', () => {
     return gulp.start(['html'])
   });
-})
+});
 
 
 // Build Tasks
@@ -116,7 +116,7 @@ gulp.task('watch', () => {
  */
 gulp.task('del-www', () => {
   return $.del(['./www/']);
-})
+});
 
 /**
  * ./src/css/ 内の SCSS ファイルを結合して CSS にトランスパイルし ./www/css/index.css に出力する
