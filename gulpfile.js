@@ -190,24 +190,24 @@ gulp.task('html', (callback) => {
  * - 事前に css タスク・js タスクを実行し、./www/index.css・./www/index.js を出力しておくこと
  * 
  * - Wiredep で bower.json の dependencies に記載されている Bower Components を取得し
- *   その main ファイルを style 要素・ script 要素として出力する
+ *   その main ファイルを link 要素・script 要素として出力する
  *   - Bower Components の main に記載されているファイルでは足りない場合は
  *     bower.json の overrides で別途修正する
- *   - CSS ファイルを style 要素として出力する場所には
+ *   - CSS ファイルを link 要素として出力する場所には
  *     <!-- bower:css --> <!-- endbower --> を記載する
  *   - JS ファイルを script 要素として出力する場所には
  *     <!-- bower:js --> <!-- endbower --> を記載する
- *   - こうして生成された ./www/index.html の style 要素・script 要素の参照先は
+ *   - こうして生成された ./www/index.html の link 要素・script 要素の参照先は
  *     ../bower_components/ 配下を参照するようになっており
  *     このままではアセットを取り込めていないため html-useref タスクで調整する
  * - Gulp-Inject は引数の gulp.src で指定したファイル群を取得し
- *   それらを style 要素・script 要素として出力する
+ *   それらを link 要素・script 要素として出力する
  *   - css タスク・js タスクで生成した index.css・index.js を決め打ちしているが glob 指定も可能
- *   - CSS ファイルを style 要素として出力する場所には
+ *   - CSS ファイルを link 要素として出力する場所には
  *     <!-- inject:css --> <!-- endinject --> を記載する
  *   - JS ファイルを script 要素として出力する場所には
  *     <!-- inject:js --> <!-- endinject --> を記載する
- *   - こうして生成された ./www/index.html の style 要素・script 要素の参照先は
+ *   - こうして生成された ./www/index.html の link 要素・script 要素の参照先は
  *     ../www/ という冗長的なパス指定になっているため html-useref タスクで調整する
  */
 gulp.task('html-inject', () => {
@@ -231,15 +231,15 @@ gulp.task('html-inject', () => {
  * 
  * - 事前に html-inject タスクを実行し ./www/index.html を出力しておくこと
  * 
- * - Gulp-Useref は HTML 中のコメントで囲んだ style 要素・script 要素のファイルを結合し
- *   1つの CSS・JS ファイルを読み込む style 要素・script 要素に HTML を書き換える
- *   - CSS ファイル群を結合して1ファイルの style 要素読み込みにしたい場所には
+ * - Gulp-Useref は HTML 中のコメントで囲んだ link 要素・script 要素のファイルを結合し
+ *   1つの CSS・JS ファイルを読み込む link 要素・script 要素に HTML を書き換える
+ *   - CSS ファイル群を結合して1ファイルの link 要素読み込みにしたい場所には
  *     <!-- build:css css/OUTPUT.css --> <!-- endbuild --> を記載する
  *   - JS ファイル群を結合して1ファイルの script 要素読み込みにしたい場所には
  *     <!-- build:js js/OUTPUT.js --> <!-- endbuild --> を記載する
  *   - これを Wiredep で挿入した Bower Components の CSS・JS に適用すると
  *     複数ファイルを結合して vendor.css・vendor.js の2ファイルを生成し
- *     HTML 中の style 要素・script 要素もこの2ファイルを読み込むよう書き換えてくれる
+ *     HTML 中の link 要素・script 要素もこの2ファイルを読み込むよう書き換えてくれる
  *   - Gulp-Inject で挿入した index.css・index.js に Gulp-Useref を適用すると
  *     ../www/ と冗長的に出力されていたパスを css/・js/ と修正してくれる
  */
