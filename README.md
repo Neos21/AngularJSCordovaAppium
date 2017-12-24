@@ -2,7 +2,8 @@
 
 AngularJS + Cordova なアプリに Appium を使って E2E テストを行うサンプルです。
 
-# How To Use?
+
+## How To Use?
 
 ```sh
 # Install Packages
@@ -33,7 +34,8 @@ $ npm run appium
 $ npm run e2e
 ```
 
-# How I Made It
+
+## How I Made It
 
 このように作りました。コマンドのみ列挙。
 
@@ -186,3 +188,18 @@ $ npm list -g --depth=0
 $ npm i -D protractor gulp-protractor wd wd-bridge appium
 $ npm i -D gulp-shell jasmine-spec-reporter
 ```
+
+
+## Author
+
+[Neo](http://neo.s21.xrea.com/) ([@Neos21](https://twitter.com/neos21))
+
+
+## Links
+
+- [Neo's World](http://neo.s21.xrea.com/)
+- [Corredor](http://neos21.hatenablog.com/)
+- [Murga](http://neos21.hatenablog.jp/)
+- [El Mylar](http://neos21.hateblo.jp/)
+- [Bit-Archer](http://bit-archer.hatenablog.com/)
+- [GitHub - Neos21GitHub](https://github.com/Neos21GitHub/)
