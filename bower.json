@@ -6,7 +6,7 @@
     "Neos21 <neos21@gmail.com> (http://neo.s21.xrea.com/)"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/Neos21GitHub/AngularJSCordovaAppium",
+  "homepage": "https://github.com/Neos21/AngularJSCordovaAppium",
   "ignore": [
     "**/.*",
     "node_modules",
