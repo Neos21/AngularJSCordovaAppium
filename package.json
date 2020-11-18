@@ -15,16 +15,28 @@
     "appium": "gulp appium",
     "e2e": "gulp e2e"
   },
+  "author": "Neos21 <neos21@gmail.com> (https://neos21.net/)",
+  "license": "MIT",
+  "homepage": "https://github.com/Neos21/AngularJSCordovaAppium#readme",
+  "bugs": {
+    "url": "https://github.com/Neos21/AngularJSCordovaAppium/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Neos21/AngularJSCordovaAppium.git"
   },
-  "author": "Neos21 <neos21@gmail.com> (http://neo.s21.xrea.com/)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Neos21/AngularJSCordovaAppium/issues"
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/Neos21"
   },
-  "homepage": "https://github.com/Neos21/AngularJSCordovaAppium#readme",
+  "dependencies": {
+    "cordova-browser": "^4.1.0",
+    "cordova-ios": "^4.4.0",
+    "cordova-plugin-browsersync": "^0.1.6",
+    "cordova-plugin-console": "^1.0.7",
+    "cordova-plugin-statusbar": "^2.2.3",
+    "cordova-plugin-whitelist": "^1.3.2"
+  },
   "devDependencies": {
     "appium": "^1.6.5",
     "babel-preset-es2015": "^6.24.1",
@@ -51,14 +63,6 @@
     "wd": "^1.3.0",
     "wd-bridge": "0.0.2",
     "wiredep": "^4.0.0"
-  },
-  "dependencies": {
-    "cordova-browser": "^4.1.0",
-    "cordova-ios": "^4.4.0",
-    "cordova-plugin-browsersync": "^0.1.6",
-    "cordova-plugin-console": "^1.0.7",
-    "cordova-plugin-statusbar": "^2.2.3",
-    "cordova-plugin-whitelist": "^1.3.2"
   },
   "cordova": {
     "plugins": {
